@@ -11,6 +11,7 @@ In research, this can make a change of method or interpretation easier for a col
 - [Proposal and maturity](docs/proposal.md)
 - [Why try it in research or academic assessment?](docs/why-adopt.md)
 - [Por qué probarlo en investigación o evaluación académica](docs/por-que-adoptarlo.md)
+- [Research papers and limits of the evidence](docs/evidence-base.md)
 - [Format specification](docs/specification.md)
 - [JSON Schema](schema/provenance.schema.json)
 - [Conformance rules](docs/conformance.md)

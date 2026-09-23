@@ -1,6 +1,6 @@
 # Antecedentes primarios y frontera de novedad
 
-Revisión localizada al 19 de septiembre de 2026. No es una revisión sistemática ni establece novedad.
+Revisión localizada, ampliada el 22 de septiembre de 2026. No es una revisión sistemática ni establece novedad. La [matriz de artículos originales](evidence-base.md) distingue el fundamento de los casos de uso de cualquier validación futura de PROVENANCE.
 
 ## W3C PROV
 
@@ -19,6 +19,7 @@ RO-Crate 1.3 define un paquete JSON-LD para agregar y describir datos y recursos
 Fuente primaria:
 
 - Research Object community, [RO-Crate 1.3 specification](https://www.researchobject.org/ro-crate/specification/1.3/introduction.html), en especial la sección de procedencia de entidades.
+- Soiland-Reyes et al., [*Packaging research artefacts with RO-Crate*](https://doi.org/10.3233/DS-210053), *Data Science* (2022).
 
 ## Procedencia de software: SLSA
 

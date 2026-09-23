@@ -4,6 +4,7 @@
 
 - Explain the proposed uses, limits, and pilot criteria for research and academic assessment.
 - Add a Spanish adoption guide for research and academic assessment.
+- Add a claim-by-claim matrix of original research papers and the limits of their relevance to this draft.
 
 ## 0.1.0-draft — 2026-09-22
 

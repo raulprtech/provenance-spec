@@ -2,6 +2,8 @@
 
 PROVENANCE es una **propuesta en borrador**, no un estándar adoptado. Plantea una hipótesis verificable: registrar decisiones, alternativas, evidencia y límites podría ayudar a una persona ajena al trabajo a reconstruir lo ocurrido sin leer una conversación privada con IA. Aún no existe un estudio independiente que demuestre ese beneficio. El [protocolo de evaluación](evaluation-protocol.md) propone cómo medirlo.
 
+La [matriz bibliográfica](evidence-base.md) enlaza artículos originales con estas ideas y precisa qué no permiten concluir.
+
 ## Investigación
 
 Un equipo puede documentar por qué cambió un método, aplazó un análisis o limitó una conclusión. El registro vincula la decisión con fuentes y artefactos, las alternativas consideradas, participantes declarados y dudas pendientes. Su JSON permite detectar referencias internas ausentes; el Markdown generado facilita la revisión por colaboradores, asesores o revisores.
@@ -10,6 +12,8 @@ Ejemplo: el equipo aplaza comparar dos modelos porque una variable no estaba dis
 
 Puede probarse en handoffs de laboratorio, cambios a análisis preespecificados, paquetes de reproducibilidad y respuestas a revisión. Complementa protocolos, cuadernos, historial Git y formatos como W3C PROV o RO-Crate. No certifica la validez científica ni que el historial esté completo.
 
+La motivación para metadatos explícitos y artefactos enlazados aparece en los [principios FAIR](https://doi.org/10.1038/sdata.2016.18) y en [RO-Crate](https://doi.org/10.3233/DS-210053). Ninguno evaluó PROVENANCE.
+
 ## Exámenes, proyectos y defensas
 
 Cuando el reglamento permite ayuda de IA, un estudiante podría entregar un registro pequeño de las decisiones que acepta declarar: qué alternativa eligió, qué evidencia revisó, qué apoyo utilizó y qué no puede concluir. El examinador puede usarlo para formular preguntas concretas. El trabajo y las respuestas del estudiante siguen siendo la base para evaluar comprensión según las reglas publicadas de la institución.
@@ -17,6 +21,8 @@ Cuando el reglamento permite ayuda de IA, un estudiante podría entregar un regi
 Ejemplo: una IA sugiere dos rutas de solución; el estudiante declara cuál eligió y adjunta el resultado de una prueba que inspeccionó. El registro conserva esa distinción. No demuestra quién escribió cada línea, si el estudiante comprendió el método ni si hubo ayuda no declarada. Tampoco debe usarse como detector de fraude o calificador automático.
 
 Una institución debería anunciar de antemano la política de uso, permitir herramientas diferentes o ausencia de IA, exigir sólo datos pertinentes al objetivo educativo y ofrecer una forma de corregir registros erróneos. No debe exigir chats privados, razonamiento oculto, credenciales ni datos de terceros. Si una evidencia no puede compartirse por privacidad o propiedad intelectual, debe poder registrarse ese límite.
+
+La [AI Assessment Scale](https://doi.org/10.53761/q3azde36) propone explicitar el uso permitido de IA según el objetivo de evaluación y cuenta con un [piloto en un contexto universitario](https://doi.org/10.14742/ajet.9434). Un [experimento aleatorizado en matemáticas](https://doi.org/10.1073/pnas.2422633122) muestra por qué hay que separar desempeño con ayuda de resultados sin ayuda. Un [estudio de detectores de texto IA](https://doi.org/10.1016/j.patter.2023.100779) documenta problemas de equidad en evaluación. Ninguno valida PROVENANCE.
 
 ## Qué puede comprobarse hoy
 
