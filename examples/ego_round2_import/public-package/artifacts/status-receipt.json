@@ -1,0 +1,26 @@
+{
+  "protocol_version": "nigma.sanitized-experiment-receipt/v1",
+  "route_id": "experiment-route-8c825c92e267e8b3",
+  "route_digest": "8c825c92e267e8b371a560db366bf62f2a7a3c7aa77a94f30889523350b5814e",
+  "runtime_snapshot_id": "ego-runtime@experiment-preview-1",
+  "runtime_snapshot_digest": "a67c95bf1228b00d5da3437f0647d0f44fb83fcfbb67d144a621374b010848dd",
+  "runtime_run_id": "synthetic-run-8c825c92e267e8b3",
+  "capability": "experiment.status",
+  "state": "planned",
+  "observed_at": "2026-09-20T12:05:00Z",
+  "artifacts": [],
+  "aggregate_metrics": {
+    "noop_operation": "status",
+    "artifact_count": 0,
+    "synthetic_harness": true
+  },
+  "evidence_refs": [
+    "authority:synthetic-authority-round2",
+    "request_digest:a15d4cf6295dd717c62b31194e1b7ce7198fd1b382bd5ce016e6eb889601c939",
+    "route:experiment-route-8c825c92e267e8b3",
+    "route_digest:8c825c92e267e8b371a560db366bf62f2a7a3c7aa77a94f30889523350b5814e",
+    "runtime_snapshot_digest:a67c95bf1228b00d5da3437f0647d0f44fb83fcfbb67d144a621374b010848dd"
+  ],
+  "id": "experiment-receipt-05767830022c242d",
+  "digest": "05767830022c242df92f1997c20b731bac065b3d30e13949b550dd820eeec4e1"
+}

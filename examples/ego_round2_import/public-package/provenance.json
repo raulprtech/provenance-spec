@@ -1,0 +1,368 @@
+{
+  "artifacts": [
+    {
+      "id": "artifact.ego.learning.package",
+      "media_type": "application/json",
+      "path": "artifacts/learning-package.json",
+      "role": "Synthetic EGO Round 2 output verified against producer manifest",
+      "sha256": "51c32666ccfbcae14892d0d40acf4936f96e40ad1fef4feb858ee6b9a7a223a5",
+      "size_bytes": 7671,
+      "verification": "tool_verified"
+    },
+    {
+      "id": "artifact.ego.plan.receipt",
+      "media_type": "application/json",
+      "path": "artifacts/plan-receipt.json",
+      "role": "Synthetic EGO Round 2 output verified against producer manifest",
+      "sha256": "dfbfd418047400845c2bf8d84d542e434e8e602becf4c7d8ccfcc7e9b546336e",
+      "size_bytes": 1158,
+      "verification": "tool_verified"
+    },
+    {
+      "id": "artifact.ego.producer.manifest",
+      "media_type": "application/json",
+      "path": "artifacts/producer-manifest.json",
+      "role": "Copied producer manifest; locally hashed but not self-attested by that manifest",
+      "sha256": "7e645b384a687d9906980eee73f5935a1e82e4e3f80be05af0d57adc59e72af2",
+      "size_bytes": 1355,
+      "verification": "tool_verified"
+    },
+    {
+      "id": "artifact.ego.receipt",
+      "media_type": "application/json",
+      "path": "artifacts/receipt.json",
+      "role": "Synthetic EGO Round 2 output verified against producer manifest",
+      "sha256": "7496f60f64a2ce547d5ebefcf72f97700875297d70b013fc00bf342f355866fd",
+      "size_bytes": 1452,
+      "verification": "tool_verified"
+    },
+    {
+      "id": "artifact.ego.status.receipt",
+      "media_type": "application/json",
+      "path": "artifacts/status-receipt.json",
+      "role": "Synthetic EGO Round 2 output verified against producer manifest",
+      "sha256": "e4fee4eb78ebf47078cde133226efca9a8a85c5abeb611affbad22eb027e961f",
+      "size_bytes": 1162,
+      "verification": "tool_verified"
+    }
+  ],
+  "created_at": "2026-09-20T12:05:00.000Z",
+  "decisions": [],
+  "evidence": [
+    {
+      "artifact_refs": [
+        "artifact.ego.producer.manifest",
+        "artifact.ego.learning.package"
+      ],
+      "classification": "tool_verified",
+      "id": "evidence.integrity.learning.package",
+      "limits": [
+        "This verifies local byte integrity against the supplied manifest, not provenance authenticity."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.producer.manifest",
+        "source.ego.learning.package"
+      ],
+      "statement": "learning-package.json matched the SHA-256 and size declared in producer-manifest.json."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.producer.manifest",
+        "artifact.ego.plan.receipt"
+      ],
+      "classification": "tool_verified",
+      "id": "evidence.integrity.plan.receipt",
+      "limits": [
+        "This verifies local byte integrity against the supplied manifest, not provenance authenticity."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.producer.manifest",
+        "source.ego.plan.receipt"
+      ],
+      "statement": "plan-receipt.json matched the SHA-256 and size declared in producer-manifest.json."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.producer.manifest",
+        "artifact.ego.receipt"
+      ],
+      "classification": "tool_verified",
+      "id": "evidence.integrity.receipt",
+      "limits": [
+        "This verifies local byte integrity against the supplied manifest, not provenance authenticity."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.producer.manifest",
+        "source.ego.receipt"
+      ],
+      "statement": "receipt.json matched the SHA-256 and size declared in producer-manifest.json."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.producer.manifest",
+        "artifact.ego.status.receipt"
+      ],
+      "classification": "tool_verified",
+      "id": "evidence.integrity.status.receipt",
+      "limits": [
+        "This verifies local byte integrity against the supplied manifest, not provenance authenticity."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.producer.manifest",
+        "source.ego.status.receipt"
+      ],
+      "statement": "status-receipt.json matched the SHA-256 and size declared in producer-manifest.json."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.learning.package"
+      ],
+      "classification": "system_inferred",
+      "id": "evidence.learning.interpretation",
+      "inference_basis": "The imported learning package labels this statement as interpretation and links it to its internal evidence catalogue.",
+      "limits": [
+        "No demuestra que exista una integración de red con Nigma o ARIA.",
+        "No demuestra validez científica ni comportamiento con workloads reales.",
+        "The underlying evidence payloads are absent and were not hash-verified."
+      ],
+      "recorded_by": "participant.ego.producer",
+      "source_refs": [
+        "source.ego.learning.package",
+        "source.learning.artifact_steps",
+        "source.learning.artifact_digest"
+      ],
+      "statement": "El fixture demuestra una transformación local repetible para esta entrada sintética."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.learning.package"
+      ],
+      "classification": "observed",
+      "id": "evidence.learning.observation.digest",
+      "limits": [
+        "The referenced evidence payloads are not present; this records a declaration, not independent verification."
+      ],
+      "recorded_by": "participant.ego.producer",
+      "source_refs": [
+        "source.ego.learning.package",
+        "source.learning.artifact_digest"
+      ],
+      "statement": "The learning package declares this observation: Dos evaluaciones del mismo contenido produjeron el mismo digest."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.learning.package"
+      ],
+      "classification": "observed",
+      "id": "evidence.learning.observation.steps",
+      "limits": [
+        "The referenced evidence payloads are not present; this records a declaration, not independent verification."
+      ],
+      "recorded_by": "participant.ego.producer",
+      "source_refs": [
+        "source.ego.learning.package",
+        "source.learning.artifact_steps"
+      ],
+      "statement": "The learning package declares this observation: El fixture completó los tres pasos declarados sin reintentos."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.learning.package"
+      ],
+      "classification": "observed",
+      "id": "evidence.learning.package.boundary",
+      "limits": [
+        "A declared plan or exercise does not show that any person completed it or learned from it."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.learning.package"
+      ],
+      "statement": "The imported learning package declares 3 study sessions and comprehension exercise 'quiz_evidence_boundary'."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.plan.receipt"
+      ],
+      "classification": "observed",
+      "id": "evidence.receipt.plan",
+      "limits": [
+        "The importer observed declared fields; it did not independently observe execution."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.plan.receipt"
+      ],
+      "statement": "The imported plan-receipt.json declares capability 'experiment.plan', state 'planned', and timestamp '2026-09-20T12:05:00Z'."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.receipt"
+      ],
+      "classification": "observed",
+      "id": "evidence.receipt.report",
+      "limits": [
+        "The importer observed declared fields; it did not independently observe execution."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.receipt"
+      ],
+      "statement": "The imported receipt.json declares capability 'experiment.report', state 'completed', and timestamp '2026-09-20T12:05:00Z'."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.status.receipt"
+      ],
+      "classification": "observed",
+      "id": "evidence.receipt.status",
+      "limits": [
+        "The importer observed declared fields; it did not independently observe execution."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.status.receipt"
+      ],
+      "statement": "The imported status-receipt.json declares capability 'experiment.status', state 'planned', and timestamp '2026-09-20T12:05:00Z'."
+    },
+    {
+      "artifact_refs": [],
+      "classification": "user_declared",
+      "id": "evidence.user.scope.synthetic.round2",
+      "limits": [
+        "This declaration is not independently authenticated and does not authorize production execution."
+      ],
+      "recorded_by": "participant.import.operator",
+      "source_refs": [],
+      "statement": "The operator declares that this import is limited to the supplied synthetic Round 2 export."
+    },
+    {
+      "artifact_refs": [
+        "artifact.ego.plan.receipt",
+        "artifact.ego.status.receipt",
+        "artifact.ego.receipt"
+      ],
+      "classification": "system_inferred",
+      "id": "evidence.workflow.reconstructed",
+      "inference_basis": "Capabilities are experiment.plan, experiment.status, and experiment.report; shared route/runtime fields match.",
+      "limits": [
+        "All receipts have the same timestamp, so chronological order is not independently established."
+      ],
+      "recorded_by": "participant.provenance.importer",
+      "source_refs": [
+        "source.ego.plan.receipt",
+        "source.ego.status.receipt",
+        "source.ego.receipt"
+      ],
+      "statement": "The three receipts represent the semantic sequence plan, status, then report for one synthetic runtime run."
+    }
+  ],
+  "limits": [
+    "Integrity checks establish byte equality with the supplied manifest, not authenticity, identity, truth, or authorization.",
+    "The import is synthetic and does not show integration with a live ARIA or Nigma service.",
+    "The learning package is a plan and exercise set; it does not demonstrate completion, comprehension, mastery, or learning.",
+    "Referenced internal evidence payloads are catalogued but absent from the exported bundle, so their hashes are not verified.",
+    "No demuestra que exista una integración de red con Nigma o ARIA.",
+    "No demuestra validez científica ni comportamiento con workloads reales."
+  ],
+  "participants": [
+    {
+      "declaration_class": "observed",
+      "declared_by": "producer-manifest.json",
+      "display_name": "ego-offline-integration-harness",
+      "id": "participant.ego.producer",
+      "kind": "tool",
+      "role": "synthetic export producer"
+    },
+    {
+      "declaration_class": "user_declared",
+      "declared_by": "import request",
+      "display_name": "Pseudonymous import operator",
+      "id": "participant.import.operator",
+      "kind": "human",
+      "role": "scope declarant"
+    },
+    {
+      "declaration_class": "tool_verified",
+      "declared_by": "src/ego_round2_importer.py",
+      "display_name": "PROVENANCE EGO Round 2 importer",
+      "id": "participant.provenance.importer",
+      "kind": "tool",
+      "role": "integrity verifier and deterministic recorder"
+    }
+  ],
+  "record_id": "record.ego.round2.22d2e3aea021e6e4",
+  "redactions": [],
+  "schema_version": "0.1.0",
+  "scope": {
+    "description": "Offline import of a synthetic EGO Round 2 receipt chain and learning package.",
+    "exclusions": [
+      "No claim of authentic identity, production execution, scientific validity, authorship share, comprehension, mastery, or learning.",
+      "No private filesystem paths, chats, patient data, test data, or credentials are included."
+    ],
+    "intended_use": "Document integrity checks, evidence boundaries, and a reconstructable synthetic workflow."
+  },
+  "sources": [
+    {
+      "classification": "tool_verified",
+      "id": "source.ego.learning.package",
+      "kind": "tool_output",
+      "locator": "artifacts/learning-package.json",
+      "notes": "Hash and size match producer-manifest.json; authenticity is not established.",
+      "title": "Imported synthetic output: learning-package.json"
+    },
+    {
+      "classification": "tool_verified",
+      "id": "source.ego.plan.receipt",
+      "kind": "tool_output",
+      "locator": "artifacts/plan-receipt.json",
+      "notes": "Hash and size match producer-manifest.json; authenticity is not established.",
+      "title": "Imported synthetic output: plan-receipt.json"
+    },
+    {
+      "classification": "observed",
+      "id": "source.ego.producer.manifest",
+      "kind": "tool_output",
+      "locator": "artifacts/producer-manifest.json",
+      "notes": "Relative public-package locator; original filesystem path intentionally omitted.",
+      "title": "Synthetic EGO Round 2 producer manifest"
+    },
+    {
+      "classification": "tool_verified",
+      "id": "source.ego.receipt",
+      "kind": "tool_output",
+      "locator": "artifacts/receipt.json",
+      "notes": "Hash and size match producer-manifest.json; authenticity is not established.",
+      "title": "Imported synthetic output: receipt.json"
+    },
+    {
+      "classification": "tool_verified",
+      "id": "source.ego.status.receipt",
+      "kind": "tool_output",
+      "locator": "artifacts/status-receipt.json",
+      "notes": "Hash and size match producer-manifest.json; authenticity is not established.",
+      "title": "Imported synthetic output: status-receipt.json"
+    },
+    {
+      "classification": "observed",
+      "id": "source.learning.artifact_digest",
+      "kind": "tool_output",
+      "locator": "fixture://ego/synthetic-checksum-run-001/digest.txt",
+      "notes": "Declared SHA-256 2bcc60fbf22703e4d668e1599d082bdcc790a5bb8450052d64454da8f8d941a3; payload absent, digest not verified.",
+      "title": "Referenced but unavailable learning evidence: artifact_digest"
+    },
+    {
+      "classification": "observed",
+      "id": "source.learning.artifact_steps",
+      "kind": "tool_output",
+      "locator": "fixture://ego/synthetic-checksum-run-001/steps.json",
+      "notes": "Declared SHA-256 1f2a0c5c11a8f7ecb42a8b03fa4ef876128c35e428e0b9f5ea1355f9846c14d7; payload absent, digest not verified.",
+      "title": "Referenced but unavailable learning evidence: artifact_steps"
+    }
+  ],
+  "title": "Synthetic EGO Round 2 receipt provenance"
+}

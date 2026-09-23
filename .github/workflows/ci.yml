@@ -1,0 +1,23 @@
+name: Reference checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        env:
+          EGO_ROUND2_FIXTURE_DIR: examples/ego_round2_import/public-package/artifacts
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate examples
+        run: |
+          python3 -m json.tool schema/provenance.schema.json > /dev/null
+          python3 src/provenance_tool.py validate examples/synthetic_collaboration/provenance.json
+          python3 src/provenance_tool.py validate examples/ego_round2_import/public-package/provenance.json

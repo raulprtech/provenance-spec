@@ -1,0 +1,34 @@
+{
+  "protocol_version": "nigma.sanitized-experiment-receipt/v1",
+  "route_id": "experiment-route-8c825c92e267e8b3",
+  "route_digest": "8c825c92e267e8b371a560db366bf62f2a7a3c7aa77a94f30889523350b5814e",
+  "runtime_snapshot_id": "ego-runtime@experiment-preview-1",
+  "runtime_snapshot_digest": "a67c95bf1228b00d5da3437f0647d0f44fb83fcfbb67d144a621374b010848dd",
+  "runtime_run_id": "synthetic-run-8c825c92e267e8b3",
+  "capability": "experiment.report",
+  "state": "completed",
+  "observed_at": "2026-09-20T12:05:00Z",
+  "artifacts": [
+    {
+      "uri": "artifact://ego/synthetic-round2-unicode-001/learning-package.json",
+      "sha256": "51c32666ccfbcae14892d0d40acf4936f96e40ad1fef4feb858ee6b9a7a223a5",
+      "size_bytes": 7671,
+      "media_type": "application/json"
+    }
+  ],
+  "aggregate_metrics": {
+    "noop_operation": "report",
+    "artifact_count": 1,
+    "synthetic_harness": true,
+    "scientific_validity_claimed": false
+  },
+  "evidence_refs": [
+    "authority:synthetic-authority-round2",
+    "request_digest:a15d4cf6295dd717c62b31194e1b7ce7198fd1b382bd5ce016e6eb889601c939",
+    "route:experiment-route-8c825c92e267e8b3",
+    "route_digest:8c825c92e267e8b371a560db366bf62f2a7a3c7aa77a94f30889523350b5814e",
+    "runtime_snapshot_digest:a67c95bf1228b00d5da3437f0647d0f44fb83fcfbb67d144a621374b010848dd"
+  ],
+  "id": "experiment-receipt-22d2e3aea021e6e4",
+  "digest": "22d2e3aea021e6e44adc98e0c6f0bfba8c8c44de4adcf3c5a3595cb6ab730335"
+}

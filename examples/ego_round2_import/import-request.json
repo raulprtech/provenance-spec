@@ -1,0 +1,14 @@
+{
+  "schema_version": "provenance.ego-round2-import-request/v1",
+  "record_title": "Synthetic EGO Round 2 receipt provenance",
+  "declared_by": "Pseudonymous import operator",
+  "declarations": [
+    {
+      "id": "scope.synthetic.round2",
+      "statement": "The operator declares that this import is limited to the supplied synthetic Round 2 export.",
+      "limits": [
+        "This declaration is not independently authenticated and does not authorize production execution."
+      ]
+    }
+  ]
+}

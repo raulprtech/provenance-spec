@@ -1,0 +1,32 @@
+{
+  "protocol_version": "ego.offline-experiment-export/v1",
+  "producer": "ego-offline-integration-harness",
+  "production_authority": false,
+  "request_id": "synthetic-round2-unicode-001",
+  "request_digest": "a15d4cf6295dd717c62b31194e1b7ce7198fd1b382bd5ce016e6eb889601c939",
+  "route_id": "experiment-route-8c825c92e267e8b3",
+  "route_digest": "8c825c92e267e8b371a560db366bf62f2a7a3c7aa77a94f30889523350b5814e",
+  "runtime_snapshot_id": "ego-runtime@experiment-preview-1",
+  "runtime_snapshot_digest": "a67c95bf1228b00d5da3437f0647d0f44fb83fcfbb67d144a621374b010848dd",
+  "receipt_id": "experiment-receipt-22d2e3aea021e6e4",
+  "receipt_digest": "22d2e3aea021e6e44adc98e0c6f0bfba8c8c44de4adcf3c5a3595cb6ab730335",
+  "generated_at": "2026-09-20T12:05:00.000Z",
+  "outputs": {
+    "plan-receipt.json": {
+      "sha256": "dfbfd418047400845c2bf8d84d542e434e8e602becf4c7d8ccfcc7e9b546336e",
+      "size_bytes": 1158
+    },
+    "status-receipt.json": {
+      "sha256": "e4fee4eb78ebf47078cde133226efca9a8a85c5abeb611affbad22eb027e961f",
+      "size_bytes": 1162
+    },
+    "receipt.json": {
+      "sha256": "7496f60f64a2ce547d5ebefcf72f97700875297d70b013fc00bf342f355866fd",
+      "size_bytes": 1452
+    },
+    "learning-package.json": {
+      "sha256": "51c32666ccfbcae14892d0d40acf4936f96e40ad1fef4feb858ee6b9a7a223a5",
+      "size_bytes": 7671
+    }
+  }
+}

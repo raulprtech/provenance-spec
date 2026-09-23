@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "record.synthetic.001",
+  "title": "Synthetic decision provenance example",
+  "created_at": "2026-09-19T18:00:00Z",
+  "scope": {
+    "description": "A fictional collaboration chooses the first format for an offline documentation prototype.",
+    "intended_use": "Demonstrate representable observable records without exposing a private conversation.",
+    "exclusions": [
+      "No claim about authorship share.",
+      "No claim that a participant learned.",
+      "No claim that file hashes authenticate people or statements."
+    ]
+  },
+  "participants": [
+    {
+      "id": "participant.human.01",
+      "kind": "human",
+      "display_name": "Fictional project lead",
+      "declaration_class": "user_declared",
+      "declared_by": "synthetic fixture author",
+      "role": "decision maker"
+    },
+    {
+      "id": "participant.ai.01",
+      "kind": "ai_system",
+      "display_name": "Fictional assistant",
+      "declaration_class": "user_declared",
+      "declared_by": "synthetic fixture author",
+      "role": "proposal generator and recorder"
+    },
+    {
+      "id": "participant.tool.01",
+      "kind": "tool",
+      "display_name": "PROVENANCE v0.1 builder",
+      "declaration_class": "tool_verified",
+      "declared_by": "src/provenance_tool.py",
+      "role": "hashing and deterministic rendering"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source.note.01",
+      "title": "Synthetic decision note",
+      "kind": "user_record",
+      "locator": "artifacts/decision-note.txt",
+      "classification": "observed",
+      "accessed_at": "2026-09-19",
+      "notes": "Fixture text created for this example; not copied from a private chat."
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact.note.01",
+      "path": "artifacts/decision-note.txt",
+      "media_type": "text/plain",
+      "role": "Observable synthetic decision note"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence.note.exists",
+      "classification": "tool_verified",
+      "statement": "The referenced note existed at build time and its bytes were hashed.",
+      "recorded_by": "participant.tool.01",
+      "source_refs": ["source.note.01"],
+      "artifact_refs": ["artifact.note.01"],
+      "limits": ["Existence and hash do not establish truth or human identity."]
+    },
+    {
+      "id": "evidence.choice.declared",
+      "classification": "user_declared",
+      "statement": "The fictional project lead selected the deterministic offline prototype.",
+      "recorded_by": "participant.ai.01",
+      "source_refs": ["source.note.01"],
+      "artifact_refs": ["artifact.note.01"],
+      "limits": ["The example is synthetic and is not evidence about a real collaboration."]
+    },
+    {
+      "id": "evidence.motivation.inferred",
+      "classification": "system_inferred",
+      "statement": "The selected option may have been favored because it reduced operational dependencies.",
+      "recorded_by": "participant.ai.01",
+      "source_refs": ["source.note.01"],
+      "artifact_refs": [],
+      "inference_basis": "The note states that the selected prototype is offline and that the signed-ledger option was deferred as out of scope.",
+      "limits": ["This is an interpretation, not a declared motive or private reasoning trace."]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision.format.01",
+      "summary": "Use structured JSON plus generated Markdown for the first prototype.",
+      "status": "accepted",
+      "decided_at": "2026-09-19T18:00:00Z",
+      "decision_maker_refs": ["participant.human.01"],
+      "rationale_summary": "The supplied note records a preference for an offline, deterministic documentation prototype.",
+      "alternatives": [
+        {
+          "label": "Signed append-only ledger",
+          "disposition": "deferred",
+          "reason": "Identity and signature infrastructure are outside the synthetic v0.1 scope."
+        },
+        {
+          "label": "Unstructured narrative only",
+          "disposition": "rejected",
+          "reason": "It would not support machine validation or explicit reference checks."
+        }
+      ],
+      "evidence_refs": ["evidence.note.exists", "evidence.choice.declared"],
+      "artifact_refs": ["artifact.note.01"],
+      "limits": ["This decision is fictional and does not establish effectiveness in real projects."]
+    }
+  ],
+  "limits": [
+    "This is a synthetic fixture, not a reconstructed private conversation.",
+    "The record is self-asserted except where a field is explicitly tool_verified.",
+    "A successful build proves format and local reference consistency only."
+  ],
+  "redactions": []
+}
+

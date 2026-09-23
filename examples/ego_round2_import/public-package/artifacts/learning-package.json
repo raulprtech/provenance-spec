@@ -1,0 +1,211 @@
+{
+  "schema_version": "ego.synthetic-report-learning/v1",
+  "generated_from": {
+    "report_id": "synthetic-checksum-run-001",
+    "report_digest": "4b555a47806ce47350cde051fee3dfaa138ee7c94f187c83013751e245463e16",
+    "generated_at": "2026-09-19T15:00:00.000Z",
+    "evidence": [
+      {
+        "id": "artifact_steps",
+        "uri": "fixture://ego/synthetic-checksum-run-001/steps.json",
+        "sha256": "1f2a0c5c11a8f7ecb42a8b03fa4ef876128c35e428e0b9f5ea1355f9846c14d7"
+      },
+      {
+        "id": "artifact_digest",
+        "uri": "fixture://ego/synthetic-checksum-run-001/digest.txt",
+        "sha256": "2bcc60fbf22703e4d668e1599d082bdcc790a5bb8450052d64454da8f8d941a3"
+      }
+    ]
+  },
+  "evidence_summary": {
+    "observations": [
+      {
+        "id": "observation_steps",
+        "statement": "El fixture completó los tres pasos declarados sin reintentos.",
+        "evidence_ref_ids": [
+          "artifact_steps"
+        ]
+      },
+      {
+        "id": "observation_digest",
+        "statement": "Dos evaluaciones del mismo contenido produjeron el mismo digest.",
+        "evidence_ref_ids": [
+          "artifact_digest"
+        ]
+      }
+    ],
+    "interpretation": {
+      "statement": "El fixture demuestra una transformación local repetible para esta entrada sintética.",
+      "evidence_ref_ids": [
+        "artifact_steps",
+        "artifact_digest"
+      ]
+    },
+    "limitations": [
+      "No demuestra que exista una integración de red con Nigma o ARIA.",
+      "No demuestra validez científica ni comportamiento con workloads reales."
+    ]
+  },
+  "study_plan": {
+    "learning_objective": "Interpretar con rigor el reporte sintético: Verificar que un fixture offline conserva resultados deterministas y trazables.",
+    "sub_objectives": [
+      "Identificar qué afirmaciones son observaciones respaldadas por evidencia.",
+      "Distinguir la interpretación acotada de los hechos observados.",
+      "Explicar qué conclusiones quedan excluidas por los límites declarados."
+    ],
+    "required_concepts": [
+      "observación",
+      "evidencia",
+      "interpretación",
+      "límite de validez"
+    ],
+    "dependencies": [
+      "Reporte synthetic-checksum-run-001",
+      "Evidencia artifact_steps",
+      "Evidencia artifact_digest"
+    ],
+    "estimated_difficulty": "introductory",
+    "study_sessions": [
+      {
+        "id": "session_observations",
+        "topic": "Observaciones y referencias",
+        "duration_minutes": 25,
+        "technique": "focus",
+        "activities": [
+          "Relacionar \"El fixture completó los tres pasos declarados sin reintentos.\" con artifact_steps.",
+          "Relacionar \"Dos evaluaciones del mismo contenido produjeron el mismo digest.\" con artifact_digest."
+        ],
+        "completion_criteria": [
+          "Cada observación queda ligada a una referencia de evidencia."
+        ]
+      },
+      {
+        "id": "session_boundary",
+        "topic": "Interpretación y límites",
+        "duration_minutes": 25,
+        "technique": "feynman",
+        "activities": [
+          "Explicar con palabras propias por qué \"El fixture demuestra una transformación local repetible para esta entrada sintética.\" es una interpretación.",
+          "Explicar el límite: No demuestra que exista una integración de red con Nigma o ARIA.",
+          "Explicar el límite: No demuestra validez científica ni comportamiento con workloads reales."
+        ],
+        "completion_criteria": [
+          "La explicación no presenta la interpretación como un hecho observado."
+        ]
+      },
+      {
+        "id": "session_retrieval",
+        "topic": "Recuperación de evidencia",
+        "duration_minutes": 15,
+        "technique": "quiz",
+        "activities": [
+          "Responder el ejercicio sin consultar la respuesta."
+        ],
+        "completion_criteria": [
+          "La respuesta cita observación, evidencia y al menos un límite."
+        ]
+      }
+    ],
+    "review_cadence_days": [
+      1,
+      3,
+      7
+    ],
+    "mastery_criteria": [
+      "Clasificar correctamente observación e interpretación.",
+      "Citar una referencia de evidencia pertinente.",
+      "Nombrar un límite que impida generalizar el resultado."
+    ],
+    "deliverables": [
+      "Explicación breve con evidencia",
+      "Ejercicio de comprensión respondido"
+    ]
+  },
+  "practice": {
+    "session": {
+      "title": "Comprensión del reporte synthetic-checksum-run-001",
+      "focus_minutes": 25,
+      "feynman_prompt": "Explica la diferencia entre lo observado, lo interpretado y lo que el reporte no permite concluir.",
+      "completion_criteria": [
+        "Usar referencias del reporte.",
+        "Mantener explícitos los límites de validez."
+      ]
+    },
+    "flashcards": [
+      {
+        "id": "card_observation",
+        "concept_id": "observation",
+        "front": "¿Cuál es una observación directamente respaldada?",
+        "back": "El fixture completó los tres pasos declarados sin reintentos.",
+        "source_artifact_ids": [
+          "artifact_steps"
+        ]
+      },
+      {
+        "id": "card_interpretation",
+        "concept_id": "interpretation",
+        "front": "¿Cuál es la interpretación acotada del reporte?",
+        "back": "El fixture demuestra una transformación local repetible para esta entrada sintética.",
+        "source_artifact_ids": [
+          "artifact_steps",
+          "artifact_digest"
+        ]
+      },
+      {
+        "id": "card_limitation",
+        "concept_id": "validity_limit",
+        "front": "¿Qué límite evita generalizar el resultado?",
+        "back": "No demuestra que exista una integración de red con Nigma o ARIA.",
+        "source_artifact_ids": [
+          "artifact_steps",
+          "artifact_digest"
+        ]
+      }
+    ],
+    "quiz": [
+      {
+        "id": "quiz_evidence_boundary",
+        "concept_id": "evidence_boundary",
+        "prompt": "Explica qué conclusión está respaldada, qué evidencia la respalda y qué no puede concluirse.",
+        "answer_key": "Observación: El fixture completó los tres pasos declarados sin reintentos. Evidencia: artifact_steps. Interpretación: El fixture demuestra una transformación local repetible para esta entrada sintética. Límite: No demuestra que exista una integración de red con Nigma o ARIA.",
+        "rubric": [
+          "Distingue observación de interpretación.",
+          "Cita al menos una referencia de evidencia.",
+          "Incluye un límite explícito."
+        ],
+        "source_artifact_ids": [
+          "artifact_steps",
+          "artifact_digest"
+        ]
+      },
+      {
+        "id": "quiz_observation",
+        "concept_id": "observation",
+        "prompt": "Enumera una observación sin añadir inferencias.",
+        "answer_key": "El fixture completó los tres pasos declarados sin reintentos.",
+        "rubric": [
+          "Reproduce el hecho observado.",
+          "No agrega conclusiones no contenidas en el reporte."
+        ],
+        "source_artifact_ids": [
+          "artifact_steps"
+        ]
+      },
+      {
+        "id": "quiz_limitation",
+        "concept_id": "validity_limit",
+        "prompt": "Nombra un límite de validez y explica su efecto.",
+        "answer_key": "No demuestra que exista una integración de red con Nigma o ARIA.",
+        "rubric": [
+          "Nombra un límite declarado.",
+          "Explica que el límite restringe la generalización."
+        ],
+        "source_artifact_ids": [
+          "artifact_steps",
+          "artifact_digest"
+        ]
+      }
+    ]
+  },
+  "comprehension_exercise_id": "quiz_evidence_boundary"
+}

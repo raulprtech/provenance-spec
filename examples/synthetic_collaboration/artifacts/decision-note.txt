@@ -1,0 +1,6 @@
+Synthetic meeting note
+
+A human participant selected a deterministic, offline documentation prototype.
+The AI system proposed a signed-ledger alternative, which was deferred because authentication is outside v0.1.
+No private chat, patient data, credentials, or claim of learning is included.
+
