@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Explain the proposed uses, limits, and pilot criteria for research and academic assessment.
+- Add a Spanish adoption guide for research and academic assessment.
+
 ## 0.1.0-draft — 2026-09-22
 
 - Initial public proposal for observable decision provenance in human–AI collaboration.

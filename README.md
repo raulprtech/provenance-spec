@@ -4,9 +4,13 @@ Public working draft 0.1.0 for recording observable decisions and evidence in hu
 
 The record has two views: structured `provenance.json` and generated `PROVENANCE.md`. It links decisions to alternatives, declared participants, sources, artifacts, hashes, evidence classes, and limits. The four classes are `observed`, `user_declared`, `tool_verified`, and `system_inferred`.
 
+In research, this can make a change of method or interpretation easier for a collaborator to reconstruct from cited evidence. In an exam or thesis defense, it can give an examiner concrete choices to discuss with a student when AI assistance is permitted. These are proposed uses, not measured benefits; the record does not establish authorship or understanding. See [why and how to pilot it](docs/why-adopt.md).
+
 ## Start here
 
 - [Proposal and maturity](docs/proposal.md)
+- [Why try it in research or academic assessment?](docs/why-adopt.md)
+- [Por qué probarlo en investigación o evaluación académica](docs/por-que-adoptarlo.md)
 - [Format specification](docs/specification.md)
 - [JSON Schema](schema/provenance.schema.json)
 - [Conformance rules](docs/conformance.md)

@@ -6,6 +6,8 @@ Status: **public working draft 0.1.0**. This is an independent proposal for disc
 
 Collaborative work with AI often leaves a narrative of decisions without a dependable link to the evidence a reviewer can inspect. A useful record should preserve what was declared, observed, and checked, plus the limits of any interpretation. It should remain readable without requiring a private chat transcript.
 
+The [adoption guide](why-adopt.md) gives concrete research and academic-assessment scenarios, checks available today, and conditions for a responsible pilot. The proposed benefit is improved documentary reconstruction; effectiveness has not yet been measured independently.
+
 ## Proposed format
 
 The proposal consists of `schema/provenance.schema.json` and the semantic rules in `docs/specification.md`. A conforming record has a version, scope, declared participants, sources, local artifacts with hashes, classified evidence, decisions with alternatives, and limitations. The format distinguishes `observed`, `user_declared`, `tool_verified`, and `system_inferred`. The Markdown view is derived from the JSON record.
