@@ -1,5 +1,7 @@
 # Literature behind the proposed use cases
 
+Scope update: scientific articles are the initial application. The educational papers below remain background for a deferred ARIA/exam profile, not justification for current educational adoption. Trust-first, non-punitive disclosure is a design commitment; this bibliography does not establish that it increases trust or disclosure, and focused literature review is still needed before making those causal claims.
+
 Localized review, 22 September 2026. These original papers motivate or constrain the use cases; **none evaluates PROVENANCE**. The citations do not establish that this draft improves reproducibility, assessment quality, learning, or academic integrity.
 
 | Paper | What it contributes here | What it does not establish |

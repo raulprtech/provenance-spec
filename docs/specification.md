@@ -2,6 +2,12 @@
 
 Estado: propuesta pública de especificación 0.1.0, en borrador. No es un estándar adoptado ni un formato estable.
 
+## Alcance actual del proyecto
+
+La aplicación inicial se reenfoca en artículos científicos: asistencia de IA capturada, decisiones humanas explícitas y delegaciones acotadas, bajo principios de transparencia no punitiva y confianza. Ver el [perfil propuesto](scientific-article-profile.md) y los [principios de confianza](trust-and-transparency.md).
+
+Las reglas del formato 0.1.0 que siguen se conservan sin cambios. No implementan todavía captura automática, intervenciones estructuradas, cobertura, aprobación de divulgación ni el resumen por un modelo. Esas capacidades requieren un contrato versionado posterior. Exámenes y ARIA quedan fuera de la primera etapa.
+
 ## 1. Propósito y no objetivos
 
 PROVENANCE v0.1 registra lo que una colaboración declara u observa acerca de decisiones, alternativas, evidencia, fuentes, participantes y artefactos. Mantiene una representación JSON y deriva de ella una vista Markdown legible.

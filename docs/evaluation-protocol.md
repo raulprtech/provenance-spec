@@ -1,74 +1,52 @@
-# Protocolo de evaluación v0.1
+# Protocolo de evaluación: asistencia de IA en artículos científicos
 
-Estado: propuesta previa a estudio. No se ha ejecutado y no contiene resultados.
+Estado: diseño previo a estudio, sin resultados. Evalúa el perfil propuesto; requiere un prototipo de captura y resumen que aún no existe. No es una evaluación de exámenes ni de ARIA.
 
-## Preguntas
+## Preguntas y alcance
 
-- RQ1, representabilidad: ¿qué proporción de hechos documentales relevantes de escenarios autorizados puede expresarse sin campos libres que contradigan el modelo?
-- RQ2, reconstrucción: ¿con qué exactitud puede un evaluador ajeno reconstruir decisiones, alternativas, evidencia y límites?
-- RQ3, carga: ¿qué tiempo, esfuerzo percibido y fricción introduce el perfil frente a baselines?
+- ¿Qué intervenciones capturables registra y resume correctamente el sistema?
+- ¿Distingue asistencia, delegación, acción humana, declaración e inferencia sin inventar decisiones?
+- ¿Cuánto trabajo humano exige revisar el registro y preparar una declaración publicable?
+- ¿Las condiciones de captura y uso permiten compartir con confianza y sin presión?
 
-No se pregunta quién es “más autor” ni si alguien aprendió.
+No se mide autoría, aprendizaje, fraude ni si un investigador “usó demasiada IA”. La confianza no se deduce de cuántos eventos declara.
 
-## Materiales y muestreo
+## Fase exploratoria
 
-1. Congelar entre 12 y 20 escenarios breves, estratificados por número de decisiones, participantes y artefactos.
-2. Usar escenarios sintéticos o públicos/licenciados; un caso privado sólo con consentimiento y versión redactada aprobada.
-3. Excluir datos clínicos, credenciales, chats privados no autorizados y materiales con IP incierta.
-4. Separar autores de registros, revisores de privacidad y evaluadores de reconstrucción.
+Preparar entre 12 y 20 escenarios sintéticos de elaboración de artículos. Incluir bibliografía, métodos, código, análisis, redacción y revisión; aceptación, modificación, rechazo, delegación, pendientes y correcciones. Esto es un piloto de factibilidad, no una muestra suficiente por definición para demostrar eficacia.
 
-El self-case de desarrollo puede encontrar defectos del esquema, pero no entra como observación independiente de eficacia ni demuestra aprendizaje.
+Incluir omisiones, trabajo externo, pérdida de eventos, tiempos desconocidos, versiones conflictivas, historia fabricada retrospectivamente, atribuciones no respaldadas, material sensible ficticio e instrucciones maliciosas dentro de las fuentes. No usar datos clínicos, credenciales reales, manuscritos confidenciales ni chats privados no autorizados.
 
-## Condiciones
+## Referencia y condiciones comparables
 
-- B0: nota narrativa libre.
-- B1: plantilla tabular simple (decisión, responsable, evidencia, fecha).
-- P: PROVENANCE v0.1 JSON + Markdown.
+Dos anotadores independientes del sistema construyen el inventario de referencia a partir de un guion o registro autorizado: intervenciones, elementos del artículo, delegaciones, decisiones explícitas, evidencia y cobertura. Resuelven desacuerdos antes de puntuar salidas. Separar autores de escenarios, revisores de privacidad y evaluadores.
 
-Asignar escenarios/condiciones con orden contrabalanceado. Congelar instrucciones, límite de tiempo y criterio de corrección antes de observar resultados. Si se añade una condición W3C PROV o RO-Crate, documentar el perfil exacto y tratarla como comparador distinto, no como implementación equivalente.
+Comparar B0 (declaración narrativa manual), B1 (tabla de tarea, asistencia, elemento afectado, decisión y evidencia) y P (captura más resumen asistido y revisión humana). Dar acceso a la misma evidencia y los mismos objetivos de divulgación; contrabalancear orden. Medir por separado captura, resumen y revisión: el formato no debe recibir crédito por disponer de más información que el comparador.
 
-## Gold standard y unidad de análisis
+Un perfil PROV/RO-Crate documentado puede añadirse como comparación de representación. No asumir interoperabilidad por semejanza de campos.
 
-Dos anotadores construyen independientemente un inventario de unidades atómicas: decisión, estado, alternativa, responsable declarado, evidencia, artefacto, fuente, clase epistemológica y límite. Resuelven desacuerdos sin consultar al evaluador de reconstrucción. La unidad primaria es el hecho documental, no el documento completo.
+## Métricas
 
-## Métricas preespecificadas
+- Resultado principal propuesto: recall de intervenciones correctamente representadas, por escenario, dentro de la cobertura capturable acordada.
+- Salvaguarda principal: proporción de afirmaciones sobre decisiones humanas sin respaldo; informar también recuentos, denominadores y tipos de error.
+- Precisión de intervenciones, atribución de actor, distinción entre delegación y aprobación, y clasificación de estados.
+- Omisiones de límites, referencias inválidas y errores separados por captura, modelo, esquema y revisor.
+- Minutos activos de revisión, correcciones necesarias y esfuerzo percibido con instrumento fijado previamente.
+- Divulgaciones sensibles ficticias en el registro, los adjuntos y la declaración final.
+- Seguridad percibida para compartir, comprensión de destinatarios y usos, disposición voluntaria a participar y motivos de exclusión o abandono.
 
-### Representabilidad
+No confundir exactitud con autenticidad: un paquete fabricado puede ser internamente coherente. Tampoco confundir satisfacción con eficacia o consentimiento con ausencia de presión.
 
-- cobertura = unidades correctamente codificadas / unidades aplicables;
-- tasa de extensión no prevista;
-- tasa de ambigüedad interanotador por campo;
-- referencias rotas y violaciones del validador por registro;
-- incidentes de privacidad o secretos detectados antes/después de revisión.
+## Análisis y criterios
 
-### Reconstrucción
+La unidad independiente es el escenario y, cuando intervengan personas, se considera también el participante; los eventos dentro de ellos no cuentan como réplicas independientes. Reportar distribuciones e intervalos adecuados al agrupamiento y comparaciones pareadas cuando proceda.
 
-- precisión, recall y F1 micro sobre unidades atómicas;
-- exactitud de clase (`observed`, `user_declared`, `tool_verified`, `system_inferred`);
-- tasa de atribuciones/inferencias no respaldadas;
-- exactitud de alternativas y límites;
-- calibración de confianza y tasa de abstención.
+Antes de un estudio confirmatorio, congelar endpoint, umbrales mínimos de cobertura y máximos de atribución falsa, plan de análisis y tamaño de muestra justificado. Registrar los cambios respecto del piloto; no elegir umbrales después de conocer resultados.
 
-### Carga
+Un incidente grave de privacidad o publicación no autorizada detiene la fase afectada hasta corregir y volver a verificar. No avanzar a afirmaciones de eficacia sin comparación justa e independiente. Mantener separados los resultados técnicos y las hipótesis sobre confianza.
 
-- minutos activos para documentar y revisar;
-- número de correcciones hasta validación;
-- escala breve de esfuerzo percibido, fijada antes del estudio;
-- tamaño del registro y tiempo de lectura/reconstrucción.
+## Condiciones de confianza y salidas
 
-## Análisis
+Los participantes conocen acceso, retención, corrección y usos permitidos; pueden limitar captura sin que eso se convierta en señal adversa. El piloto no usa sus registros para puntuar uso de IA ni castigar la divulgación. Si las políticas reales contradicen este acuerdo, no presentar el piloto como no punitivo.
 
-- Reportar intervalos compatibles con el diseño y distribuciones, no sólo promedios.
-- Usar comparaciones pareadas por escenario/participante cuando corresponda.
-- Mantener separados errores del esquema, del generador, del documentador y del evaluador.
-- Analizar cualitativamente omisiones y redacciones; no convertir ausencia de registro en ausencia de contribución.
-- Declarar cambios posteriores a la congelación y no ajustar hipótesis después de ver resultados.
-
-## Criterios de factibilidad antes de una afirmación
-
-Un piloto sólo habilita avanzar si no hay incidentes graves de privacidad, las referencias son validables, los evaluadores distinguen las cuatro clases y la carga puede medirse de forma reproducible. Los umbrales numéricos para superioridad o no inferioridad deben fijarse con asesoría metodológica antes del estudio; v0.1 no los inventa.
-
-## Salidas previstas
-
-Protocolo congelado, diccionario de anotación, escenarios permitidos, registros por condición, reporte de errores, análisis reproducible y declaración de exclusiones. Ninguna salida debe contener chats privados, credenciales, datos clínicos ni evaluaciones de autoría individual.
-
+Publicar sólo materiales sintéticos o expresamente autorizados: protocolo, diccionario de anotación, errores, tiempos y resultados agregados. Ningún resultado se transfiere automáticamente a exámenes, aprendizaje o decisiones disciplinarias.

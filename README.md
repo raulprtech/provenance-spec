@@ -1,30 +1,57 @@
 # PROVENANCE
 
-Public working draft 0.1.0 for recording observable decisions and evidence in human–AI collaboration. This is a proposal for review, not an adopted standard. The format is independent of ARIA and any particular AI provider.
+An experimental proposal for automatically documenting AI assistance, human decisions, and delegation while preparing a scientific article. **Transparent AI use, built on trust—not detection to punish its use.**
 
-The record has two views: structured `provenance.json` and generated `PROVENANCE.md`. It links decisions to alternatives, declared participants, sources, artifacts, hashes, evidence classes, and limits. The four classes are `observed`, `user_declared`, `tool_verified`, and `system_inferred`.
+This is a proposal for review, not an adopted standard, an AI detector, or an authorship assessment.
 
-In research, this can make a change of method or interpretation easier for a collaborator to reconstruct from cited evidence. In an exam or thesis defense, it can give an examiner concrete choices to discuss with a student when AI assistance is permitted. These are proposed uses, not measured benefits; the record does not establish authorship or understanding. See [why and how to pilot it](docs/why-adopt.md).
+## Scientific articles first
+
+The intended workflow captures interventions from integrated tools and lets a model organize them into an author-reviewable record: literature discovery, ideation, methodology, code, analysis, interpretation, drafting, translation, editing, visualization, and reviewer responses.
+
+Each intervention should connect to an article element and version, available evidence, and explicitly recorded human acceptance, modification, rejection, or delegation. We seek to document **all captured interventions within a declared scope**, not every possible way AI helped. External work remains unknown.
+
+## Trust, not judgment for using AI
+
+Researchers should be able to share decisions and delegations without the mere use of AI becoming a reason to judge or punish them. We favor trust in a documented process over attempts to detect AI use for punishment.
+
+This is a design commitment, not a demonstrated effect. Scientific claims remain open to criticism, and the project cannot override journal policies or guarantee how others use a disclosure. Capture should be consented and bounded; sharing requires author review. Missing records mean unknown coverage, not misconduct. No AI-use score or authorship percentage belongs in this project.
+
+Read the [trust charter](docs/trust-and-transparency.md) and [Spanish guide](docs/por-que-adoptarlo.md).
+
+## Available versus planned
+
+| Available now | Proposed, not implemented |
+|---|---|
+| Draft 0.1.0 schema, partial offline validator, deterministic Markdown generator | Tool-connected automatic capture and model-assisted organization |
+| Evidence, artifact, and decision records | Structured interventions, delegation, coverage, corrections, and approval workflow |
+| Synthetic examples and experimental EGO importer | Article-editor integration and author-approved AI-use disclosure generator |
+
+The current record has structured `provenance.json` and generated `PROVENANCE.md` views. It distinguishes `observed`, `user_declared`, `tool_verified`, and `system_inferred`. Hash checks establish byte equality, not identity, chronology, truth, authorship, or learning.
+
+The [article profile](docs/scientific-article-profile.md) defines the target and remaining work. The wire format stays at `0.1.0`; this documentation revision does not release a schema or claim automatic capture works. Exams and ARIA are a later, separately evaluated application, outside the initial scope.
 
 ## Start here
 
 - [Proposal and maturity](docs/proposal.md)
-- [Why try it in research or academic assessment?](docs/why-adopt.md)
-- [Por qué probarlo en investigación o evaluación académica](docs/por-que-adoptarlo.md)
-- [Research papers and limits of the evidence](docs/evidence-base.md)
-- [Format specification](docs/specification.md)
+- [Scientific-article profile and roadmap](docs/scientific-article-profile.md)
+- [Trust and non-punitive transparency](docs/trust-and-transparency.md)
+- [Why pilot it for scientific articles?](docs/why-adopt.md)
+- [Transparencia y confianza en artículos científicos](docs/por-que-adoptarlo.md)
+- [Research papers and their limits](docs/evidence-base.md)
+- [Existing format specification](docs/specification.md)
 - [JSON Schema](schema/provenance.schema.json)
-- [Conformance rules](docs/conformance.md)
+- [Conformance and known gaps](docs/conformance.md)
 - [Synthetic decision example](examples/synthetic_collaboration/PROVENANCE.md)
 - [Prior art](docs/prior-art.md)
 - [Evaluation protocol](docs/evaluation-protocol.md)
 
-The `src/` programs are a Python 3.10+ reference implementation using the standard library. The [EGO Round 2 importer](docs/ego-round2-import.md) is an experimental adapter; it is not a prerequisite for using the format.
+The Python 3.10+ tools use the standard library. The [EGO importer](docs/ego-round2-import.md) is a historical synthetic adapter, not an article integration or a prerequisite.
 
-## Try the reference implementation
+## Try the existing reference implementation
 
 ```bash
-python3 -m unittest discover -s tests -v
+EGO_ROUND2_FIXTURE_DIR=examples/ego_round2_import/public-package/artifacts \
+  python3 -m unittest discover -s tests -v
 python3 src/provenance_tool.py validate examples/synthetic_collaboration/provenance.json
 python3 src/provenance_tool.py build \
   examples/synthetic_collaboration/provenance.input.json \
@@ -33,8 +60,8 @@ python3 src/provenance_tool.py build \
   --markdown-out /tmp/PROVENANCE-example.md
 ```
 
-Hashes verify byte equality against a supplied value. They do not authenticate people, establish the truth of a statement, or prove that someone learned. The format does not record private reasoning or calculate authorship percentages.
+The CLI is a partial validator. It does not independently recheck artifact bytes in its `validate` command, and copied importer attachments are not sanitized. Review all inputs and outputs before sharing; do not use confidential material in the pilot.
 
 ## Maturity and participation
 
-Draft 0.1.0 can change. Producers and consumers should pin the `schema_version` they support. [Contributing](CONTRIBUTING.md) explains how to propose changes; [security and privacy notes](SECURITY.md) describe current limits. The project is licensed under [Apache 2.0](LICENSE).
+Draft 0.1.0 can change. Consumers should pin supported versions. See [contributing](CONTRIBUTING.md), [security and privacy](SECURITY.md), and [Apache 2.0 license](LICENSE). No independent effectiveness study or organizational endorsement is claimed.

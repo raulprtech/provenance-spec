@@ -1,74 +1,31 @@
-# Esqueleto de preprint (destino inicial: arXiv; sin envío autorizado)
+# Esqueleto de preprint (sin envío autorizado)
 
-Título provisional: **Observable Decision Provenance for Human–AI Collaboration: A Minimal, Privacy-Bounded Profile and Evaluation Protocol**
+Título provisional: **Trust-First Documentation of AI Assistance and Human Decisions in Scientific Articles: A Proposed Profile and Evaluation Protocol**
 
-## Resumen
+## Resumen e introducción
 
-Problema, distinción entre procedencia observable y atribución/autenticidad, perfil v0.1, protocolo de evaluación y resultados pendientes. No incluir resultados hasta ejecutar el protocolo preregistrado o congelado.
+Problema: documentar asistencia, delegaciones y decisiones sin convertir el uso de IA en motivo de castigo. Distinguir principios de diseño, hipótesis y resultados. No presentar la captura automática como implementada ni la confianza como efecto demostrado.
 
-## 1. Introducción
+## Trabajo relacionado
 
-- Necesidad de reconstruir decisiones y evidencia en trabajo humano–IA.
-- Riesgos de narrativas post hoc, captura excesiva y confusión entre registro, autoría, autenticidad y aprendizaje.
-- Preguntas de investigación sobre representabilidad, reconstrucción y carga.
-- Contribuciones formuladas como artefacto/protocolo hasta contar con resultados.
+Comparar W3C PROV, RO-Crate, declaraciones de uso de IA, cuadernos electrónicos y documentación de decisiones. Justificar un perfil nuevo frente a una tabla simple y un perfil de formatos existentes. La bibliografía actual no valida PROVENANCE; la literatura sobre confianza y divulgación requiere ampliación antes de fundamentar afirmaciones causales.
 
-## 2. Trabajo relacionado
+## Modelo y condiciones de confianza
 
-- W3C PROV: entidades, actividades, agentes, derivaciones y especialización.
-- RO-Crate: empaquetado de objetos de investigación y procedencia de entidades.
-- SLSA: atestaciones de procedencia de build.
-- C2PA: procedencia vinculada criptográficamente a contenido y límites de interpretación.
-- Literatura pendiente: explicaciones de sistemas de IA, documentación de decisiones, cuadernos electrónicos, reproducibilidad y autoría académica.
+Intervenciones, elementos versionados del artículo, delegaciones acotadas, decisiones explícitas, cobertura desconocida, correcciones y aprobación para compartir. Separar origen, observación y alcance de verificación. Consentimiento, minimización y usos no punitivos; no prometer inmunidad frente a terceros.
 
-## 3. Requisitos y amenazas
+## Implementación
 
-- Modelo de información observable.
-- Separación epistemológica de cuatro clases.
-- Privacidad, secretos, IP, referencias rotas, historia fabricada y falsa certeza.
-- No objetivos: cadena de pensamiento, puntuación de autoría, aprendizaje, identidad y verdad.
+Distinguir el formato 0.1.0 y generador existentes del perfil y las integraciones pendientes. Describir límites de validación, privacidad de adjuntos, narraciones fabricadas e instrucciones en las fuentes.
 
-## 4. Perfil PROVENANCE v0.1
+## Evaluación
 
-- Modelo JSON y reglas semánticas.
-- Transformación determinista a Markdown.
-- Cálculo de hashes y alcance exacto de `tool_verified`.
-- Mapeo exploratorio, no normativo, a W3C PROV/RO-Crate.
+Seguir el protocolo revisado: referencia independiente, información equivalente, cobertura, atribuciones falsas, esfuerzo de revisión y condiciones de confianza. Separar unidades agrupadas y fijar criterios antes del estudio confirmatorio.
 
-## 5. Implementación de referencia
+## Resultados
 
-- Biblioteca estándar, operación offline, rutas confinadas.
-- Validación de referencias e inferencias.
-- Redacción defensiva y sus falsos negativos/positivos.
-- Caso sintético reproducible.
+Pendientes. Los ejemplos sintéticos y tests no son evidencia de eficacia, adopción ni confianza.
 
-## 6. Evaluación
+## Discusión, ética y disponibilidad
 
-- Corpus de escenarios autorizados, sintéticos y/o públicos.
-- Tareas de codificación y reconstrucción por evaluadores que no participaron.
-- Medidas de cobertura, exactitud con abstención, tiempo, carga subjetiva y desacuerdo.
-- Baselines preregistrados: nota libre y plantilla simple; opcionalmente un perfil W3C PROV/RO-Crate adaptado si es viable.
-- Análisis de errores y eventos de privacidad.
-
-## 7. Resultados
-
-Marcadores pendientes para resultados cuantitativos y cualitativos. El ejemplo del repositorio no se reporta como evidencia de eficacia, novedad o aprendizaje.
-
-## 8. Discusión
-
-- Qué puede reconstruirse y qué permanece desconocido.
-- Coste de documentar frente a utilidad posterior.
-- Interoperabilidad, autenticación y firmas como trabajo futuro.
-- Riesgos de vigilancia y uso indebido en evaluación laboral/académica.
-
-## 9. Limitaciones y ética
-
-- Sesgo de selección de escenarios y participantes.
-- Autodeclaraciones, omisiones y dependencia de la calidad de entrada.
-- Redacción incompleta, reidentificación e IP.
-- Prohibición de inferir autoría, desempeño individual o aprendizaje.
-
-## 10. Disponibilidad y reproducibilidad
-
-Versión congelada, esquema, generador, fixtures sintéticos, scripts de análisis y protocolo, sujetos a revisión de licencia/privacidad. No prometer apertura de materiales no autorizados.
-
+Cobertura parcial, correcciones, carga, usos secundarios y riesgo de vigilancia. Exámenes/ARIA fuera del alcance inicial. Publicar sólo materiales autorizados y distinguir transparencia de autoría, verdad, cumplimiento editorial y aprendizaje.

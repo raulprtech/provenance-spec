@@ -2,11 +2,17 @@
 
 Status: **public working draft 0.1.0**. This is an independent proposal for discussion and testing. It has not been adopted by a standards organization and does not claim interoperability with W3C PROV or RO-Crate.
 
+## Initial scope and trust
+
+The initial application is documenting captured AI assistance, explicit human decisions, and bounded delegation while preparing scientific articles. We favor trust and voluntary, non-punitive transparency over detection to punish AI use. Scientific claims remain open to scrutiny; the project cannot override external policies or guarantee protection from third-party uses.
+
+The [article profile](scientific-article-profile.md) defines the design target and roadmap. The [trust charter](trust-and-transparency.md) specifies consent, correction, access, and sharing expectations. Automatic capture, model-assisted organization, and author-approved disclosure are planned, not implemented. This revision does not change the 0.1.0 wire format.
+
 ## Problem
 
 Collaborative work with AI often leaves a narrative of decisions without a dependable link to the evidence a reviewer can inspect. A useful record should preserve what was declared, observed, and checked, plus the limits of any interpretation. It should remain readable without requiring a private chat transcript.
 
-The [adoption guide](why-adopt.md) gives concrete research and academic-assessment scenarios, checks available today, and conditions for a responsible pilot. The proposed benefit is improved documentary reconstruction; effectiveness has not yet been measured independently.
+The [adoption guide](why-adopt.md) gives concrete scientific-article scenarios, checks available today, and conditions for a responsible pilot. The proposed benefit is improved documentary reconstruction; effectiveness has not yet been measured independently.
 
 ## Proposed format
 
@@ -23,7 +29,7 @@ The Python tools under `src/` are a reference implementation, not the definition
 
 ## Relationship to ARIA
 
-ARIA may consume this format through a versioned adapter after it can distinguish declared facts from checked facts and display limits. The current publication does not attest that ARIA has implemented the adapter or that any user learned from a learning package.
+ARIA and exams are outside the initial scope. A later educational profile requires separate policy, privacy, accessibility, and evaluation work. Article documentation does not establish learning or suitability for disciplinary decisions. No ARIA integration is claimed.
 
 ## Review questions
 

@@ -25,4 +25,9 @@ If `jsonschema` is already installed, also check both records against Draft 2020
 
 ## Known gaps
 
+The scientific-article profile is a design target, not part of 0.1.0 conformance. Passing current checks does not demonstrate capture completeness, human approval, or readiness for confidential article material.
+
+Reproduced gaps include missing required source titles or decision times accepted by the CLI (a missing decision time then breaks rendering), malformed reference objects raising an exception, and unsupported `tool_verified` claims passing structural checks. The CLI `validate` command does not rehash artifact files. The importer copies original attachments without scanning/redacting all their contents and does not fully cross-check manifest metadata. These are open implementation issues, not fixed by this documentation revision.
+
+
 The Python validator does not fully check date-time syntax or every `additionalProperties` condition from the schema. The draft lacks a separate signed trust profile, independent third-party implementations, and an interoperability test against W3C PROV or RO-Crate.
